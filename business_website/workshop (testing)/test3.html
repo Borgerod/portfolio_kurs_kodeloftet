@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Thief Example</title>
+  <!-- Include the color-thief library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+  <style>
+    header {
+    background:  url("../images/title_background.jpg");
+      display: flex;
+      flex-direction: column;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-height: 100vh;
+      color: #fff; /* Set a default text color */
+    }
+
+    h1 {
+      /* Style for the text in the header */
+      font-size: 2em;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>Your Website Title</h1>
+  </header>
+
+  <script>
+    // Wait for the DOM to be ready
+     window.onload = function() {
+      // Get the header element and the background image
+      const header = document.getElementById('header');
+      const backgroundImage = new Image();
+      backgroundImage.src = getComputedStyle(header).backgroundImage.slice(4, -1).replace(/"/g, ""); // Get the URL of the background image
+
+      // Create a ColorThief instance
+      const colorThief = new ColorThief();
+
+      // Use the ColorThief instance to get the dominant color
+      const dominantColor = colorThief.getColor(backgroundImage);
+      // Set the text color in the header based on the dominant color
+      header.style.color = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
+    };
+  </script>
+</body>
+</html>

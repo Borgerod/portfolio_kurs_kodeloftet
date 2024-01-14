@@ -1,0 +1,84 @@
+
+body{
+    background-color:grey;
+}
+
+.head-link ul li {
+    position: relative;
+    float: left;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    height: 2em;
+    width: auto;
+    padding: 0.5em 0.98em;
+}
+.head-link ul li ul {
+    width: 100%;
+}
+/* .head-link ul ul {
+    display: none;
+} */
+
+/* .head-link ul li:hover > ul {
+    display: block;
+}
+ */
+.head-link ul {  
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+
+.head-link ul li:hover {
+    background: #ffffff;
+}
+
+.head-link ul li:hover a {
+    color: #434343;
+    border-bottom: none;
+}
+
+.head-link ul li a {
+    display: block; 
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+.head-link ul ul {
+    /* background: #ffffff;  */
+    border-radius: 0px; 
+    padding: 0;
+    position: absolute; 
+    top: 99%;
+    left: 0;
+    text-align: left;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    padding-bottom: 0.8em;
+    padding-top: 0.5em;
+    box-shadow: 0px 0.3em 0.4em rgba(0,0,0,0.3);
+}
+
+.head-link ul ul li {
+    float: none; 
+    position: relative;
+    padding: 0em;
+}
+
+.head-link ul ul li a {
+    padding: 0.5em 1.24em;
+    color: #434343;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}   
+
+.head-link ul ul li a:hover {
+    background: #ffffff;
+    text-decoration: underline;
+}
+
+.head-link ul ul ul {
+    position: absolute; 
+    left: 100%; 
+    top:0;
+}

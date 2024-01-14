@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/theme.css" type="text/css">
+    <script src="https://kit.fontawesome.com/bb2433f669.js" crossorigin="anonymous"></script>
+
+    <style>
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #b2e0df;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-container{
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover > .search-input{
+    width: 400px;
+}
+
+.search-container .search-input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s;
+
+}
+
+.search-container .search-btn .fas{
+    color: #5cbdbb;
+}
+
+
+.add-new-todo-container{
+    display: flex;
+    width: 100%;
+    gap: 5%;
+}
+
+#new-element-input{
+    display: flex;
+    width: 90%;
+}
+
+#addBtn{
+    display: flex;
+    width: 5%;
+}
+
+
+.todo.checked{
+  color: #888;
+  text-decoration: line-through;
+}
+/* adding check mark */
+.todo.checked::before{
+    content:"";
+    position: relative;
+    position: absolute;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    /* right: 10%; */
+
+    top: inherit;
+    left: 30%;
+    /* left:(inherit+50px); */
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+
+    </style>
+    
+</head>
+<body>
+
+
+<!--! ______________ TODO EXAMPLE 1 ______________-->
+
+
+
+    <div class="search-container">
+
+        <div class="title-div">
+            <h2a> TODO </h2a>
+            <h3>  Stylized todo for course submission </h3>
+        </div>
+
+        <div class="todo-container">
+            <ul>
+
+                <li class="todo">  do something
+                    <!-- <input class="todo-input" onclick = todoPrint() type="checkbox" id="todo" name="todo" value="Finished">
+                    <label for="todo-input">  </label> -->
+                </li>
+            </ul>
+
+
+            <div class="add-new-todo-container">
+                <input type="text" id="new-element-input" placeholder="Title...">
+                <button onclick="newElement()" class="addBtn">Add</button>
+            </div>
+
+        </div>
+
+    </div>
+ 
+
+
+
+</body>
+
+
+
+<script>
+
+    function newElement(){
+        // todo make this 
+    }
+    // Adds delete (X) button next to list items
+    let todo = document.getElementsByTagName('LI');
+    let i;
+    for (i = 0; i < todo.length; i++){
+        let item = document.createElement("SPAN");
+        let txt = document.createTextNode("\u00D7");
+        item.className = "delete";
+        item.appendChild(txt);
+        todo[i].appendChild(item);
+    };
+    delete window.i;
+    // delete i;
+
+
+    // will delete listitem when X-button is clicked
+    let delete_ = document.getElementsByClassName("delete");
+    i = 0; //resetting i 
+    for (i = 0; i < todo.length; i++){
+        delete_[i].onclick = function(){
+            let div = this.parentElement;
+            div.remove();
+        } 
+    }
+
+    // add checked symbol when clicking list item
+    // let list = document.getElementsByClassName("todo");
+    var list = document.querySelector('ul');
+    list.addEventListener('click', function(ev) {
+        // ev = mouse event ( click )
+            if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+                }
+                // console.log(ev.target)
+        }, false, );
+
+    
+
+    // i = 0; //resetting i 
+    // for (i = 0; i < list.length; i++){
+    //     list[i].onclick = function(){
+    //     let item = document.createElement("SPAN");
+    //     let txt = document.createTextNode("\u00D7");
+    //     item.className = "delete";
+    //     item.appendChild(txt);
+    //     } 
+    //     list[i].appendChild(item);
+    // }
+
+
+</script>
+</html>

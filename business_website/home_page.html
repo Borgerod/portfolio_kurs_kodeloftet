@@ -1,0 +1,273 @@
+<!-- 
+    note: (19.12.23) an insident occoured and last weeks work did not get pushed and got deleted. this week i need to redo it: fluid_gradient and darkmode_button
+    TODO: 
+    - [X] Fix fluid_gradient
+    - [X] fix darkmode button
+    - [X] fix burger menu
+    - [X] fix logo
+    - [ ] add search bar to nav & fix arrangement of nav-elements so it looks nice
+    - [ ] fix glitchy load screen (when loading homepage it blinks the popup window before hiding it. it should allways be hidden)
+    - [X] play with darkmode
+    - [X] fix "I AM THE RIGHT SIDE" overflows into footer
+    - [X] lightmode message still shows before lightmode and is not shown during transition
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="root/home_page.html"></a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>MUO Limited</title>
+    
+    <!-- local imports -->    
+    <link rel="stylesheet" href="./css/theme.css" type="text/css">
+    <link rel="stylesheet" href="./css/menu_style.css" type="text/css">
+    <link rel="stylesheet" href="./css/darkmode_button.css" type="text/css">
+    <link rel="stylesheet" href="./css/buttons.css" type="text/css">
+    <link rel="stylesheet" href="./css/todo_list.css" type="text/css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/animations.css" type="text/css">
+    
+
+
+    <!-- external imports  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/horror" >
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
+    
+    <!-- external imports  -->
+    <script src="https://kit.fontawesome.com/bb2433f669.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    
+    <!-- local imports  -->
+    <script src="javascript/todo_list.js" defer >  </script>
+    <script src="javascript/fuild_gradient.js" >  </script>
+    <script src="javascript/darkmode_button.js" defer>  </script>
+    
+</head>
+
+<body>
+    <!-- LANDING PAGE -->
+    <header id="header">
+        <navbar-layer> 
+            <nav class="logo-container"><div class="logo">MUO</div></nav>
+
+                <nav class="navbar">
+                    
+                    <ul class="nav-links">
+                        <a onclick="changeIcon(this)"><i  id="close-icon" class="close fa-solid fa-xmark"></i></a>
+                        <i class="spacer"></i>
+                        <li><a href="/">About</a></li>
+                        <li class="services"><a href="/">Services</a>
+                            <ul class="dropdown">
+                                <li><a href="/">Dropdown 1</a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 3</a></li>
+                                <li><a href="/">Dropdown 4</a></li>
+                            </ul> 
+                        </li>
+                        <li><a href="/">Pricing</a></li>
+                        <li><a href="/">Contact</a></li>
+                    </ul>
+                    
+                    <div class="left-menu-container">
+                        <div class="search-container">
+                            <input type="text" name="search" placeholder="Search..." class="search-input">
+                            <a href="#" class="search-btn">
+                                    <i class="fas fa-search"></i>      
+                            </a>
+                        </div>
+                        <a onclick="changeIcon(this)"><i id= "menu-icon" class="hamburger fa-solid fa-bars"></i></a>
+                    </div> 
+                </nav>
+        </navbar-layer>
+
+        <header-layer><h1> BEHOLD </h1></header-layer>
+        
+        <header-subtitle-container>
+            <h2a> A bunch of Lorem Ipsum </h2a>
+        </header-subtitle-container>
+    </header>
+
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main_block">
+    
+        
+        <div class="full_div">
+            <h3>I AM THE UPPER DIV</h3>
+            <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>I AM THE LEFT SIDE</h3>
+                <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
+                <!--! FOR TESTING -->
+                <!-- <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p> -->
+                <button class="default" type="button">Click Me!</button>
+            </div>
+            <div class="col">
+                <h3>I AM THE RIGHT SIDE</h3>
+                <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
+            </div>
+        </div>
+
+        <darkmode-button-container >
+            <button class="iconbutton fa-solid fa-sun" onclick="lightmodeButton()"> </button>
+        </darkmode-button-container>
+        
+
+
+        <!-- TODO LIST -->
+
+        <div class="col" id="todo-container">
+            <h3> TO-DO LIST</h2>
+                
+                <form class="todo">
+                    <input id="todoInput" type="text" placeholder="Title..." required>
+                    <button type="button"  class="default addButton" id="add-button">Add</button>
+                    <button type="button"  class="default addButton" id="clear-button">clear</button>
+                </form>
+                
+                <ul class="todo"id="todo-list">
+                    <li>Hit the gym</li>
+                    <li class="checked">Pay bills</li>
+                    <li>Meet George</li>
+                    <li>Buy eggs</li>
+                    <li>Read a book</li>
+                    <li>Organize office</li>
+                </ul>
+
+         </div>
+
+
+
+        <!-- ANIMATION DEMONSTRATION -->
+   
+            <section>
+                <h3> Animation demonstration </h3>
+            </section>
+    
+            <section>
+                <ul class="animationDisplay">
+                    <li class="fade-in-out"></li>
+                    <li class="move"></li>
+                    <li class="rotate"></li>
+                    <li class="scale"></li>
+                </ul>
+            </section>
+    
+            <section class="window">
+                <section class="messageWindow">
+                    <h2a> Are you feeling stressed? </h2a>
+                    <p class="padded">
+                        Find calmness by trying out our new breathing exercise feature, 
+                        just follow the instructions to the right. It's easy! 
+                    </p>
+                </section>
+                
+                <section class="featureWindow">
+                    <h3> Breathing Exercises </h3>
+                    <p>
+                        <pulse_box id="breathingExercise"></pulse_box>
+                    </p>
+                </section>
+            </section>
+    
+    
+
+
+
+    </main>
+
+    <!-- ALTERNATIV MAIN FOR LIGHTODE -->
+    <bodylightmode class="lightmodeOverlay"></bodylightmode>
+    
+<!-- FOOTER -->
+<footer class ="footer">
+    
+    <div class="col-1">
+        <h3 class="footer"> USEFUL LINKS</h3>
+        <a href=""> About </a>
+        <a href=""> Services </a>
+        <a href=""> Contact </a>
+        <a href=""> Shop </a>
+        <a href=""> Blog </a>
+    </div>
+    <div class="col-2">
+        
+        <h3 class="footer"> NEWSLETTER</h3>
+        <form>
+            <input type="text" placeholder="Your Email Address" required>
+            <br>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3 class="footer">CONTACT</h3>
+        <p>123, XYV Road, BSK 3 <br> Bangalore, karantaka, IN </p>
+        <div class="social-icons">
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-solid fa-phone"></i>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script>
+var preview = document.getElementById('pretend_view');
+var images = document.getElementById('pretend_images');
+var thumbnails = document.querySelectorAll('#pretend_images > div');
+
+thumbnails.forEach(function(elem){
+	elem.onclick = onClick.bind(null, elem);
+});
+
+function onClick(elem, e){
+	clearPreview();
+  addToPreview(elem);
+}
+
+function clearPreview(){
+	var elem = document.querySelector('.preview');
+  
+  if(elem){
+    elem.className = elem.className.replace('preview', '');
+    images.appendChild(elem);
+  }
+}
+
+function addToPreview(elem){
+	elem.className = 'preview';
+  preview.appendChild(elem);
+}
+// Burger menu Icon
+function changeIcon(anchor) {
+    let burger_icon = anchor.querySelector("i");
+    const navLinks = document.querySelector('.nav-links');
+    // adds "active" to .nav-links 
+    burger_icon.classList.contains('fa-bars') ? navLinks.classList.add('active') : navLinks.classList.remove('active');
+
+}
+
+// Burger menu close icon
+function closeButton(anchor){
+    let close_icon = anchor.querySelector("i");
+    const navLinks = document.querySelector('.nav-links');
+    // removes "active" from .nav-links 
+    close_icon.classList.contains('fa-bars') ? navLinks.classList.remove('active') : navLinks.classList.add('active');
+}
+    
+</script>
+
+</html>

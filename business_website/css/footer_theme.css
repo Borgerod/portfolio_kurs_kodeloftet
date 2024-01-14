@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+
+.footer{
+  margin-top: 10px;
+  width: 100%;
+  padding:2vw 6vw;
+  justify-content: space-around;
+  background:#333;
+  color:#efefef;
+  display: flex; 
+}
+
+.footer div{
+  text-align: center;
+}
+
+.footer div h3 {
+    font-weight: 300; 
+    letter-spacing: 1px ;
+}
+
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+
+.col-1 a:hover{
+    color: #ee4141;
+}
+
+.col-2{
+  flex-grow: 2;
+  padding-bottom: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+
+form input{
+    margin-bottom: 2vw;
+    width: 30vw;
+    height: 4vw;
+    border-radius: 4px;
+    text-align: center;
+    outline:none;
+    border: none;
+}
+
+
+form button {
+      padding:1vw 2vw;
+      background-color: transparent;
+      border: 1vw;
+      outline: rgb(110, 106, 102) solid medium;
+      
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+form button:hover{
+      outline: #ee4141 solid medium;
+      color: #ee4141;
+    }
+    
+
+div.social-icons{
+    padding-top: 1vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icons i{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+.social-icons i:hover{
+    color: #ee4141;
+}

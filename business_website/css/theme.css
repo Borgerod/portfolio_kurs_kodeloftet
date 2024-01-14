@@ -1,0 +1,274 @@
+
+:root {
+  background: #f2f2f2;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+body {
+  visibility: visible;
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(70deg, #7f766f, #272727);  */
+  background: black;
+  /* TODO [ ]: make gradient reactive to background photo(s). */
+  color: #858585;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-family: Arial, sans-serif;
+  color: rgb(212, 211, 209);
+  text-align: left;
+  
+}
+
+/* ______________________________ HEADER _________________________________ */
+
+
+/* 
+  NOTE: For the menu css, see "menu_style.css" 
+*/
+
+
+/* The visisible and back layer of the header, the header contains both nav-bar and title-page.*/
+.header_background{
+  background:  url("../media/images/title_background.jpg");
+  
+}
+header img{
+  background:  url("../media/images/title_background.jpg");
+
+  /* background-image: url("../media/images/title_background.jpg"); */
+  display: flex;
+  flex-direction:column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height:100vh;
+}
+
+header {
+  background:  url("../media/images/title_background.jpg");
+
+  /* background-image: url("../media/images/title_background.jpg"); */
+  display: flex;
+  flex-direction:column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height:100vh;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    height: 100vh;
+}
+
+/* The semi-hidden header blurry header layer, which is clipped in the shape of the title */
+header-layer {
+  background-image: url("../media/images/title_background_blurry.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(77, 77, 77, 0.1);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+header-subtitle-container{
+  position: absolute;
+  right:0;
+  bottom:0;
+  padding: 10px;
+}
+
+
+
+
+/* ______________________________ MAIN _________________________________ */
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.full_div{
+  padding: 3vw;
+  width: 100%;
+  row-gap: 20px;
+  flex-direction: column;
+  align-items: center;  
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(224, 222, 222);
+  /* background-color: #19191993; */
+
+} 
+/* .full_div >  h3{
+color:#bdada1;
+} */
+
+
+/* ---------------- TABLE ----------------  *//* aka; the "I am the right /left side" divs */
+.col {
+  padding: 3vw;
+  row-gap: 20px;
+  flex-direction: column;
+  align-items: center;  
+  display: flex;
+  flex-wrap: wrap;
+  outline: grey solid thin;
+  background:transparent;
+  background-color: #19191993;
+
+}
+
+@media screen and (min-width: 701px) {
+  .row {
+    
+    /* background:transparent; */
+    /* background-color: black; */
+    display: flex;
+    padding:0.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .row {
+    /* background:transparent; */
+    padding:0rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
+
+
+/* ______________________________ FOOTER _________________________________ */
+
+
+.footer{
+  padding:2vw 4vw;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-around;
+  background:#333;
+  display: flex; 
+}
+
+.footer div{
+  padding: 2vw;
+  text-align: center;
+}
+
+.footer div h3 {
+    font-weight: 300; 
+    letter-spacing: 1px ;
+    
+}
+
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.col-1 a:hover{
+    color: #ee4141;
+}
+
+.col-2{
+  flex-grow: 2;
+  padding-bottom: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+
+form input{
+    margin-bottom: 2vw;
+    width: 30vw;
+    height: 6vh;
+    border-radius: 4px;
+    text-align: center;
+    outline:none;
+    border: none;
+}
+
+
+/* ---------------- FONTS ----------------  */
+h1{
+  font: bold 26vw 'Futura';  
+}
+
+
+h2a{
+  color: #908372;
+  font-size:calc((30px + 5vw)/2); 
+}
+
+
+h2{
+  background-color: #565656;
+  display: flex; 
+  justify-content:center;
+  font-size: 26vw;
+  margin: 0 25%;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.8);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+h3{
+  color:#bdada1;
+}
+h4{
+  font-size: 4vw;
+  color:#2c2c2c;
+}
+
+
+
+/* ______________________________ OTHER _________________________________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

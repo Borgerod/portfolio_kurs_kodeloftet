@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* OLD TEMPLATE CODE__________________________________________________ */
+body {
+    background: #f2f2f2;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #858585;
+    overflow-x: hidden;
+}
+a {
+    color: #858585;
+}
+
+li {
+  list-style: none;
+}
+
+
+/*! DROPDOWN LIST */
+.services:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    position: absolute;    
+    background-color: #191919;
+    opacity: 80%;
+    display: none;    
+}
+
+.dropdown li {
+    text-align: center; 
+}
+
+.navbar {    
+  padding: 20px;
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  background:transparent;
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.nav-links {
+    display: flex; 
+    gap: 6vw;
+    font-size: 2vw;
+    text-decoration:none;
+    list-style: none;
+} 
+
+.nav-links a {
+  padding: 20px;
+  text-decoration: none;
+}
+.nav-links li {
+  display: flex; 
+  justify-content: space-around; 
+  text-align: center;  
+}
+
+.nav-links li:hover {
+  text-decoration: none;
+  background-color: red;
+}
+/*______________________________________________________________________________________________________________________________________________________ */
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.menu-icon{
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 700px) {
+    .menu-icon{
+        visibility: visible;
+    }
+    .nav-links{
+        visibility: hidden;
+    }
+
+    .overlay {
+        display: flex; 
+        gap: 6vw;
+        font-size: 2vw;
+        text-decoration:none;
+        list-style: none;
+    };
+}
+
+#burger-icon{
+    font-size:30px; 
+    cursor:pointer;
+    text-align: end;
+    background-color: #f2f2f2;
+}
+.hamburger{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.navbar{    
+    display: flex;
+    width: 100%;
+
+    justify-content: end;
+}
+</style>
+</head>
+<body>
+
+
+<nav class="navbar">
+    <div class="logo">MUO</div>
+
+        <a id="burger-icon" class="menu-icon" onclick="openNav()">&#9776;</a>
+        <ul class="nav-links">
+            <i  id= "close-icon" class="close fa-solid fa-xmark"></i>
+            <i class="spacer"></i>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li class="services">
+                <a href="/">Services</a>
+                <ul class="dropdown">
+                    <li><a href="/">Dropdown 1</a></li>
+                    <li><a href="/">Dropdown 2</a></li>
+                    <li><a href="/">Dropdown 3</a></li>
+                    <li><a href="/">Dropdown 4</a></li>
+                </ul>
+            </li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>    
+    </nav> 
+
+
+<div class="navbar">
+<ul class="navbarlist">
+    <li>
+            <!-- <ul class="nav-links">
+                <i class="spacer"></i>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li class="services">
+                    <a href="/">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="/">Dropdown 1</a></li>
+                        <li><a href="/">Dropdown 2</a></li>
+                        <li><a href="/">Dropdown 3</a></li>
+                        <li><a href="/">Dropdown 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/">Pricing</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul> -->
+    </li>
+
+    <li>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+            <div class="overlay-content">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li class="services">
+                        <a href="/">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="/">Dropdown 1</a></li>
+                            <li><a href="/">Dropdown 2</a></li>
+                            <li><a href="/">Dropdown 3</a></li>
+                            <li><a href="/">Dropdown 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Pricing</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </li>
+
+    <!-- <li> -->
+        <!-- <li id="burger-icon" class="menu-icon" onclick="openNav()">&#9776;</li> -->
+    <!-- </li> -->
+</ul>
+</div>
+
+
+  
+ 
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+     
+</body>
+</html>

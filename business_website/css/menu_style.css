@@ -1,0 +1,234 @@
+
+/*! LOGO */
+.logo {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:#191919;
+  padding: 3vw;
+  font-size: 2vw;
+  height: 2vh;
+}
+
+navbar-layer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo-container{
+display: flex;
+justify-content: space-between;
+align-items:center;
+padding: 4vw;
+
+}
+/*! MENU BAR */
+.navbar {
+  /* position: absolute; */
+  display: flex;
+  /* justify-content: space-between; */
+  align-items:center;
+  /* padding: 4vw; */
+  padding-right: 4vw;
+  top:0;
+  right:0;
+  left:0;
+  background:transparent;
+}
+
+
+/*! MENU LIST  */
+.nav-links {
+  display: flex; 
+  align-items:center;
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 1vw 0vw;
+  display: flex; 
+}
+.nav-links li:hover {
+  background-color: red;
+}
+.nav-links li > a{
+  padding: 0 4vw;
+  font-size: 1.4vw;
+  text-decoration:none;
+}
+/* ! _____________________________________________________________________________________ */
+
+
+.left-menu-container{
+display: flex;
+justify-content: space-between;
+}
+
+
+.search-container{
+  float: right;
+padding: 1vw 1vw;
+justify-content: center;
+align-items: center;
+display: flex;
+/* justify-content: space-between; */
+
+margin: 0;
+background-color: #191919;
+border: none;
+cursor: pointer;
+transition: 0.8s;
+box-shadow:  
+/* 4px 4px 6px 0 rgba(80, 79, 79, 0.3), */
+            /* -4px -4px 6px 0 rgba(89, 89, 90, 0.2),  */
+            inset -4px -4px 6px 0 rgba(0, 0, 0, 0.2),
+            inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+/* **************************** */
+
+.search-container:hover > .search-input{
+  z-index: 1;
+  /* margin-right: (50% - 18vw);   */
+  width: 18vw;
+  /* padding: 0 1vw; */
+}
+
+.search-container .search-input{
+  background: transparent;
+  border: none;
+  outline:none;
+  width: 0px;
+  transition: 0.3s;
+  color: #ccc;
+}
+
+.search-container .search-btn .fas{
+  font-size: 20px;
+  /* display:flex; */
+  /* justify-content: center; */
+  color: #ccc;
+}
+/* ! _____________________________________________________________________________________ */
+
+
+/*! DROPDOWN LIST */
+.services{
+  position: relative;
+  --should-show:none;
+}
+.nav-links .services:hover {
+  background-color: #191919;
+  --should-show:unset;
+  /* border-style:solid;
+  border-width: 1px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-color: grey; 
+  */
+  /* .dropdown needs to be   top: 101%;*/
+}
+.dropdown{
+  display: var(--should-show);
+  width: 100%;
+  position: absolute;
+  /* top: 101%; */
+  top:100%;
+  background-color: #191919;
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+.dropdown > li{
+  display: flex;
+  justify-content: center;
+  padding: 1vh 2vw;
+}
+
+.dropdown> li > a{
+  padding: 0;
+  margin: 0;
+}
+
+
+/*! HAMBURGER ICON */
+.hamburger {
+  font-size: 0px;
+}
+.close{
+  font-size: 24px;
+}
+#menu-icon{
+  visibility: hidden
+}
+
+#close-icon{
+  visibility:hidden;
+}
+
+
+/*! FUNCION FOR DISPLAYING HAMBURGER MENU BLOCK  */
+@media only screen and (max-width: 700px) {
+    .navbar{
+      padding:4vw;
+      justify-content: space-between      
+    }
+
+    #menu-icon {
+      visibility: visible;
+    }
+
+    .spacer{
+      height:100px;
+      display:flex;
+    }
+    
+    .nav-links {
+        padding:6vw 4.5vw;
+        position: fixed;
+        transform: translateY(-103%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: black;
+        min-height: 103%;
+        width: 100%;
+    }
+
+    .nav-links.active {  
+      transform: translateY(-3%);
+      flex-direction: column;
+      opacity: 0.9;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      display:flex;
+      justify-content: center;
+    }
+    #close-icon{
+      visibility:visible;
+      display:flex;
+      justify-content: right;
+    }
+
+    .left-menu-container{
+      gap:3vw;
+    }
+ 
+    .search-container{
+      padding: 0 1vw;
+      width: 30vw;
+    display: flex;
+    }
+    /* **************************** */
+
+    .search-container .search-btn .fas{
+      font-size: 12px;
+    }
+
+}
